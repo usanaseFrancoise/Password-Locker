@@ -1,5 +1,5 @@
 import string
-
+import pyperclip
 class User:
     '''
     class to create user account
