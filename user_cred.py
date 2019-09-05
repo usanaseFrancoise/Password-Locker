@@ -1,5 +1,6 @@
 import string
 import pyperclip
+import random
 class User:
     '''
     class to create user account
@@ -49,7 +50,7 @@ class  Credential:
         '''
         Credential.credentials_list.append(self)
 
-    def genereate_password(sixe=8,char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+    def generate_password(size=8,char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
         '''
         function to generate an 8 character password
         '''
