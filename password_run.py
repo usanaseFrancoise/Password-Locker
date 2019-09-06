@@ -59,10 +59,17 @@ def main():
     while True:
             print(' ')
             print("_"*80)
-            print('use this code to perfom specific task you want :\n cc -Create Account \n log -Log In \n ex -Exit ')
+            print('use this code to perfom specific task you want :\n cc -Create Account \n log -Log In \n del- delete account \n  ex -Exit ')
             short_code = input('Enter a choice: ').lower().strip()
+
             if short_code == 'ex':
                 break
+            elif short_code == 'del':
+                print("_"*60)
+                print(' ')
+                print('Successfully Deleted!')
+                break
+            
             elif short_code == 'cc':
                 print("_"*80)
                 print(' ')
@@ -87,12 +94,18 @@ def main():
                     print(' ')  
                     while True:
                         print("_"*80)
-                        print('to navigate to credential account use code:\n cc-create account \n dc- display Credentials \n copy- copy  password \n  ex- Exit')
+                        print('to navigate to credential account use code:\n cc-create account \n dc- display Credentials \n copy- copy  password \n del- delete \n ex- Exit')
                         short_code=input('Enter a choice: ').lower().strip()
                         print("_"*80)
                         if short_code =='ex':
                             print(' ')   
                             print(f'Thank you! {user_name}.')
+                            break
+                        elif short_code == 'del':
+
+                            print("_"*60)
+                            print(' ')
+                            print('Successfully Deleted!')
                             break
                         elif short_code =='cc':
                             print(' ')
@@ -103,13 +116,20 @@ def main():
                             while True:
                                 print(' ')
                                 print("_"*80)
-                                print("please enter the choose for entering password for credential: \n exp-enter existing password \n gp-generate password \n ex- Exit")
+                                print("please enter the choose for entering password for credential: \n exp-enter existing password \n gp-generate password \n del- delete \n ex- Exit")
                                 psw_choice = input('Enter an option: ').lower().strip()
                                 print("-"*80)
                                 if psw_choice == 'exp':
                                     print(" ")
                                     password = input('enter your password: ').strip()
                                     break
+                                
+                                elif short_code == 'del':
+                                    print("_"*60)
+                                    print(' ')
+                                    print('Successfully Deleted!')
+                                    break
+                                
                                 elif psw_choice == 'gp':
                                     password = generate_password()
                                     break

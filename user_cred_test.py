@@ -28,6 +28,16 @@ class TestUser(unittest.TestCase):
 		Test to check if the new users info is saved into the users list
 		'''
 		self.new_user.save_user()
+		self.assertEqual(len(User.users_list),2)
+
+	def test_delete_account(self):
+		'''
+		delete account
+		'''
+		self.new_user.save_user()
+		test_user=User("Test","user","password")
+		test_user.save_user()
+		self.new_user.delete_user()
 		self.assertEqual(len(User.users_list),1)
 
 class TestCredentials(unittest.TestCase):
@@ -52,6 +62,16 @@ class TestCredentials(unittest.TestCase):
 		return current_user
 
 		self.assertEqual(current_user,Credential.check_user(user2.password,user2.first_name))
+
+
+	
+
+	
+
+
+
+
+
 
 	def setUp(self):
 		'''

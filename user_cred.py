@@ -24,6 +24,8 @@ class User:
         function to   delete user instance
         '''
         User.users_list.remove(self)
+
+
     
 
 class  Credential:
@@ -81,15 +83,6 @@ class  Credential:
         '''
         User.users_list.remove(self)
 
-    @classmethod
-    def user_exit(cls,first_name):
-        '''
-        function to  exit
-        '''
-        for user in cls.users_list:
-            if user.first_name == first_name:
-                return True
-        return False
 
 	
     @classmethod
