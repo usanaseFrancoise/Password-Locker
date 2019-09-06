@@ -103,7 +103,7 @@ def main():
                             break
                         elif short_code == 'del':
 
-                            print("_"*60)
+                            print("_"*80)
                             print(' ')
                             print('Successfully Deleted!')
                             break
@@ -125,7 +125,7 @@ def main():
                                     break
                                 
                                 elif short_code == 'del':
-                                    print("_"*60)
+                                    print("_"*80)
                                     print(' ')
                                     print('Successfully Deleted!')
                                     break
@@ -147,7 +147,7 @@ def main():
                                 print('Here is a list of all credentials')
                                 print(' ')
                                 for credential in display_credentials(user_name):
-                                    print(f'Site Name:{credential.site_name} -Account Name:{credential.account_name} - Password: {credential.password}')
+                                    print(f'Site Name: {credential.site_name} -Account Name: {credential.account_name} - Password: {credential.password}')
                                     print(' ')
                             else:
                                 print(' ')
