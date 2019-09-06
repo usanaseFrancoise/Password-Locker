@@ -1,11 +1,11 @@
 import pyperclip
 from user_cred import User, Credential
 
-def create_user(fname,lname,email,password):
+def create_user(fname,lname,password):
     '''
     function to create a new user account
     '''
-    new_user= User(fname,lname,email,password)
+    new_user= User(fname,lname,password)
     return new_user
 
 def save_user(user):
@@ -69,12 +69,10 @@ def main():
                 print('to create a new account:')
                 first_name = input('Enter your first_name - ').strip()
                 last_name = input('Enter your last_name - ').strip()
-                email=input('enter preferable e-mail - ').strip()
                 password= input('Enter your password - ').strip()
-              
-                save_user(create_user(first_name,last_name,email,password))
+                save_user(create_user(first_name,last_name,password))
                 print(" ")
-                print(f'New Acoount created for: {first_name}{last_name} {email} using password: {password}')
+                print(f'New Acoount created for: {first_name}{last_name} using password: {password}')
 
             elif short_code == 'log':
                 print("_"*80)
