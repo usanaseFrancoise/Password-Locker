@@ -19,6 +19,12 @@ class User:
         function to save a anew created user instance
         '''
         User.users_list.append(self)
+    def delete_user(self):
+        '''
+        function to   delete user instance
+        '''
+        User.users_list.remove(self)
+    
 
 class  Credential:
     '''
@@ -50,6 +56,7 @@ class  Credential:
         '''
         Credential.credentials_list.append(self)
 
+
     def generate_password(size=8,char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
         '''
         function to generate an 8 character password
@@ -67,6 +74,22 @@ class  Credential:
                 user_credentials_list.append(credential)
         return user_credentials_list
 				
+    @classmethod 
+    def delete_user(self):
+        '''
+        delete saved account
+        '''
+        User.users_list.remove(self)
+
+    @classmethod
+    def user_exit(cls,first_name):
+        '''
+        function to  exit
+        '''
+        for user in cls.users_list:
+            if user.first_name == first_name:
+                return True
+        return False
 
 	
     @classmethod
