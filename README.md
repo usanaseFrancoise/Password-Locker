@@ -15,8 +15,8 @@
   * To exit from the application
  
 ## technology used
-*python3.6
-*pyperclip
+  * python3.6
+  * pyperclip
 
 ### License
 usanaseFrancoise &copy;2019 password Locker
