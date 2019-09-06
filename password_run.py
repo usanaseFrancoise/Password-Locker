@@ -79,7 +79,7 @@ def main():
                 password= input('Enter your password - ').strip()
                 save_user(create_user(first_name,last_name,password))
                 print(" ")
-                print(f'New Acoount created for: {first_name}{last_name} using password: {password}')
+                print(f'New Acount created for: {first_name}{last_name} using password: {password}')
 
             elif short_code == 'log':
                 print("_"*80)
@@ -139,7 +139,7 @@ def main():
                                     print('Try Again!.')
                             save_credential(create_credential(user_name,site_name,account_name,password))
                             print(' ')
-                            print(f'Credential Created:Site Name:{site_name} -Acount Name:{account_name} -Password:{password}')
+                            print(f'Credential Created:Site Name:  {site_name} -Acount Name:{account_name} -Password:{password}')
                             print(' ')
                         elif short_code == 'dc':
                             print(' ')
@@ -147,16 +147,17 @@ def main():
                                 print('Here is a list of all credentials')
                                 print(' ')
                                 for credential in display_credentials(user_name):
-                                    print(f'Site Name: {credential.site_name} -Account Name: {credential.account_name} - Password: {credential.password}')
+                                    print(f'Site Name : {credential.site_name} - Account Name: {credential.account_name} - Password: {credential.password}')
                                     print(' ')
                             else:
                                 print(' ')
-                                print("you don't seem to have any crdential")
+                                print("you don't seem to have any credentials")
                                 print(' ')
                     
                         elif short_code =='copy':
                             print(' ')
-                            chosen_site = input("enter the site for credential password to copy")
+                            chosen_site = input("enter the site for credential password to copy: ")
+
                             copy_credential(chosen_site)
                             print(' ')
                         else: 

@@ -133,7 +133,7 @@ class TestCredentials(unittest.TestCase):
 		self.new_credential.save_credential()
 		twitter=Credential('jane','Twitte','dukundane','d100')
 		twitter.save_credential()
-	
+		find_credential = None
 
 		for credential in Credential.user_credentials_list:
 			find_credential=Credential.find_by_site_name(credential.site_name)
@@ -146,3 +146,4 @@ class TestCredentials(unittest.TestCase):
 
 if __name__ == '__main__':
 	unittest.main()
+	# unittest.main(verbosity=2)
